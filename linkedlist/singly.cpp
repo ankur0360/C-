@@ -17,12 +17,18 @@ void printList(Node *head){
         curr = curr -> next;
     }
 }
+Node *insertBegin(Node *head, int x){
+    Node *newNode = new Node(x);
+    newNode -> next = head;
+    return newNode;
+}
 int main(){
     Node *head = new Node(10);
     Node *t1 = new Node(20);
     Node *t2 = new Node(30);
     head -> next = t1;
     t1 -> next = t2;
+    head = insertBegin(head, 40);
     printList(head);
     return 0;
 }
