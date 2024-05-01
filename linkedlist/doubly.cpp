@@ -19,6 +19,10 @@ void printList(Node *head){
         cout << curr -> data << " ";
         curr = curr -> next;
     }
+    // if(head == nullptr)              //for reverse print
+    //     return;
+    // printList(head -> next);
+    // cout << head -> data << " ";
 }
 Node *insertBegin(Node *head, int x){
     Node *newNode = new Node(x);
